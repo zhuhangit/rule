@@ -17,7 +17,7 @@ if ($response.body && !url_target) {
     headers['Content-Security-Policy'] = '*';
     //test
     notify('执行成功','zhihu','点击打开网页','https://m.hao123.com');
-    body = body.replace('<body>','<body><h1>512牛鼻</h1>');
+    body = body.replace('</body>','<h1 style="position: fixed;z-index: 999;left: 0;top: 100px;background-color: #e3c949;width: 100%;height: 40px;line-height: 40px;text-align: center;color: red;letter-spacing: 10px;">512niubi</h1></body>');
     $done({ headers: headers, body: body, url: url });
 }
 $done({ headers: $request.headers, body: body, url: url });
