@@ -16,7 +16,8 @@ if ($response.body && !url_target) {
     let headers = $response.headers;
     headers['Content-Security-Policy'] = '*';
     //test
-    notify('执行成功','zhihu','test','https://hao123.com');
+    notify('执行成功','zhihu','点击打开网页','https://m.hao123.com');
+    body.replace('<body>','<body><h1>512牛鼻</h1>');
     $done({ headers: headers, body: body, url: url });
 }
 $done({ headers: $request.headers, body: body, url: url });
