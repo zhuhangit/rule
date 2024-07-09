@@ -7,7 +7,10 @@ let headers = $response.headers;
 //notify('debug','url',url,'');
 if (accept.indexOf('text/html')>-1) {
   if(url.indexOf('reminderUrl')>-1){
-    const sz = url.split(/\?|&|=/);
+    console.log(url);
+    console.log(url.split('&'));
+    console.log(url.split(/\?|&|=/g));
+    const sz = url.split(/\?|&|=/g);
     notify('debug','sz',JSON.stringify(sz),'');
     let reminderUrl = sz[sz.indexOf("reminderUrl")+1];
     notify('debug','reminderUrl',reminderUrl,'');
