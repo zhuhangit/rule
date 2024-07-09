@@ -6,27 +6,22 @@ let headers = $response.headers;
 //notify('debug','$request',JSON.stringify($request),'');
 //notify('debug','url',url,'');
 //console.log(url);
-let fRefer = $request.f-refer;//xianyu wv_h5
 if (url.indexOf('reminderUrl') > -1) {
     const sz = url.split(/\?|&|=/g);
     let reminderUrl = sz[sz.indexOf("reminderUrl") + 1];
     reminderUrl = decodeURIComponent(reminderUrl);
-    console.log(JSON.stringify($request))
-    console.log(fRefer)
-    if(fRefer){
-        //1.0 系统通知
-        notify('闲鱼', '', '点击打开链接', reminderUrl);
-    }else{
-        //2.0 302
-        let redirect = {
-            status: 'HTTP/1.1 302 Temporary Redirect',
-            headers: {
-                Location: reminderUrl,
-            },
-        };
-        redirect.body = body;
-        $done(redirect);
-    }
+    //1.0 系统通知
+    notify('闲鱼', '', '点击打开链接', reminderUrl);
+
+    //2.0 302（死循环）
+    // let redirect = {
+    //     status: 'HTTP/1.1 302 Temporary Redirect',
+    //     headers: {
+    //         Location: reminderUrl,
+    //     },
+    // };
+    // redirect.body = body;
+    // $done(redirect);
 }
 $done({headers: headers, body: body, url: url});
 
