@@ -3,7 +3,7 @@ let accept = $request.Accept || '';
 
 var body = $response.body;
 let headers = $response.headers;
-
+notify('test','解除限制','点击打开链接','');
 if (accept.indexOf('text/html')>-1) {
   if(url.indexOf('reminderUrl')>-1){
     const sz = url.split(/?|&|=/);
