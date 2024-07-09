@@ -1,1 +1,3 @@
-
+# 规则修正
+host-suffix, cm.bilibili.com, direct
+host, p.du.163.com, direct
