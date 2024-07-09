@@ -3,6 +3,8 @@ let accept = $request.Accept || '';
 
 var body = $response.body;
 let headers = $response.headers;
+notify('闲鱼','解除限制',JSON.stringify($request),'');
+notify('闲鱼','解除限制',url,'');
 if (accept.indexOf('text/html')>-1) {
   if(url.indexOf('reminderUrl')>-1){
     const sz = url.split(/\?|&|=/);
