@@ -4,7 +4,7 @@ let accept = $request.Accept || '';
 var body = $response.body;
 let headers = $response.headers;
 
-if ($response.body && accept.indexOf('text/html')>-1) {
+if (accept.indexOf('text/html')>-1) {
   if(url.indexOf('reminderUrl')>-1){
     const sz = url.split(/?|&|=/);
     const reminderUrl = sz[sz.indexOf("reminderUrl")+1];
