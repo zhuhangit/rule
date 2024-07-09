@@ -11,4 +11,4 @@ https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/YoutubeAds.conf, tag=�
 https://github.com/DualSubs/YouTube/raw/main/modules/DualSubs.YouTube.snippet, tag=🍿 DualSubs: ▶ YouTube, update-interval=604800, opt-parser=false, enabled=true
 https://whatshub.top/rewrite/wnds.conf, tag=蜗牛, update-interval=604800, opt-parser=false, enabled=true
 # 广告
-https://raw.githubusercontent.com/zhuhangit/rule/master/zh_rewite_all.conf, tag=zh_rewite_all, force-policy=direct, update-interval=604800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/zhuhangit/rule/master/zh_rewite_all.conf, tag=zh_rewite_all, update-interval=604800, opt-parser=false, enabled=true
