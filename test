@@ -1,0 +1,14 @@
+[filter_remote]
+# 规则修正
+host-suffix, cm.bilibili.com, direct
+host, p.du.163.com, direct
+# 广告
+https://raw.githubusercontent.com/zhuhangit/rule/master/zh_filter_all.list, tag=zh_filter_all, force-policy=direct, update-interval=604800, opt-parser=true, enabled=true
+
+[rewrite_remote]
+# 其他
+https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/YoutubeAds.conf, tag=油管去广告@Maasea, update-interval=604800, opt-parser=false, enabled=true
+https://github.com/DualSubs/YouTube/raw/main/modules/DualSubs.YouTube.snippet, tag=🍿 DualSubs: ▶ YouTube, update-interval=604800, opt-parser=false, enabled=true
+https://whatshub.top/rewrite/wnds.conf, tag=蜗牛, update-interval=604800, opt-parser=false, enabled=true
+# 广告
+https://raw.githubusercontent.com/zhuhangit/rule/master/zh_rewite_all.conf, tag=zh_rewite_all, force-policy=direct, update-interval=604800, opt-parser=true, enabled=true
