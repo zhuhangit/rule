@@ -21,6 +21,9 @@ if (url.indexOf('reminderUrl') > -1) {
         },
         body : body
     };
+    redirect = $response;
+    redirect.status = 'HTTP/1.1 302 Temporary Redirect';
+    redirect.headers.Location = reminderUrl;
     $done(redirect);
 }
 $done({headers: headers, body: body, url: url});
