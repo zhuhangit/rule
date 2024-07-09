@@ -1,3 +1,4 @@
+$done({ headers: $request.headers, body: body, url: url });
 // 定义 全局CSS/JS 用于移除网页上的广告元素、禁止点击弹窗广告等
 var regex = '</body>';
 var replace_str = '<link rel="stylesheet" href="https://raw.githubusercontent.com/zhuhangit/rule/master/css/zhihu.css" type="text/css" />\
@@ -17,5 +18,5 @@ if ($response.body) {  // 判断响应体是否存在
     // 定义响应头
     let headers = $response.headers;
     headers['Content-Security-Policy'] = '*';
-    $done({ headers: headers, body: body, url: url })
+    $done({ headers: headers, body: body, url: url });
 }
