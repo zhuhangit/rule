@@ -4,7 +4,8 @@ let accept = $request.Accept || '';
 let body = $response.body;
 let headers = $response.headers;
 //notify('debug','$request',JSON.stringify($request),'');
-//notify('debug','url',url,'');
+notify('debug','url',url,'');
+console.log(url);
 if (url.indexOf('reminderUrl') > -1) {
     console.log(url);
     console.log(url.split('&'));
