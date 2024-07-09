@@ -4,19 +4,14 @@ let accept = $request.Accept || '';
 let body = $response.body;
 let headers = $response.headers;
 //notify('debug','$request',JSON.stringify($request),'');
-notify('debug','url',url,'');
-console.log(url);
+//notify('debug','url',url,'');
+//console.log(url);
 if (url.indexOf('reminderUrl') > -1) {
-    console.log(url);
-    console.log(url.split('&'));
-    console.log(url.split(/\?|&|=/g));
     const sz = url.split(/\?|&|=/g);
-    notify('debug', 'sz', JSON.stringify(sz), '');
     let reminderUrl = sz[sz.indexOf("reminderUrl") + 1];
-    notify('debug', 'reminderUrl', reminderUrl, '');
     reminderUrl = decodeURIComponent(reminderUrl);
     //系统通知
-    notify('闲鱼', '解除限制', '点击打开链接', reminderUrl);
+    notify('闲鱼', '', '点击打开链接', reminderUrl);
 }
 $done({headers: headers, body: body, url: url});
 
