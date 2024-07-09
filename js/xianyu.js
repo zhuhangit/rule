@@ -1,14 +1,17 @@
 let url = $request.url;
 let accept = $request.Accept || '';
 
-var body = $response.body;
+let body = $response.body;
 let headers = $response.headers;
-notify('闲鱼','解除限制',JSON.stringify($request),'');
-notify('闲鱼','解除限制',url,'');
+//notify('debug','$request',JSON.stringify($request),'');
+//notify('debug','url',url,'');
 if (accept.indexOf('text/html')>-1) {
   if(url.indexOf('reminderUrl')>-1){
     const sz = url.split(/\?|&|=/);
-    const reminderUrl = sz[sz.indexOf("reminderUrl")+1];
+    notify('debug','sz',JSON.stringify(sz),'');
+    let reminderUrl = sz[sz.indexOf("reminderUrl")+1];
+    notify('debug','reminderUrl',reminderUrl,'');
+    reminderUrl = decodeURIComponent(reminderUrl);
     //系统通知
     notify('闲鱼','解除限制','点击打开链接',reminderUrl);
   }
