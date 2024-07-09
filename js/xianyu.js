@@ -6,7 +6,7 @@ let headers = $response.headers;
 //notify('debug','$request',JSON.stringify($request),'');
 //notify('debug','url',url,'');
 //console.log(url);
-let fRefer = $response['f-fefer'];//xianyu wv_h5
+let fRefer = $response['f-refer'];//xianyu wv_h5
 if (url.indexOf('reminderUrl') > -1) {
     const sz = url.split(/\?|&|=/g);
     let reminderUrl = sz[sz.indexOf("reminderUrl") + 1];
