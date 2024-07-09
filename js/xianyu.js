@@ -11,7 +11,7 @@ if (url.indexOf('reminderUrl') > -1) {
     let reminderUrl = sz[sz.indexOf("reminderUrl") + 1];
     reminderUrl = decodeURIComponent(reminderUrl);
     //1.0 系统通知
-    //notify('闲鱼', '', '点击打开链接', reminderUrl);
+    notify('闲鱼', '', '点击打开链接', reminderUrl);
 
     //2.0 302
     let redirect = {
@@ -19,11 +19,9 @@ if (url.indexOf('reminderUrl') > -1) {
         headers: {
             Location: reminderUrl,
         },
-        body : body
     };
-    redirect = $response;
-    redirect.status = 'HTTP/1.1 302 Temporary Redirect';
-    redirect.headers.Location = reminderUrl;
+    console.log(body);
+    // redirect.body = body;
     $done(redirect);
 }
 $done({headers: headers, body: body, url: url});
