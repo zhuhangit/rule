@@ -15,7 +15,7 @@ if (url.indexOf('reminderUrl') > -1) {
 
     //2.0 302
     let redirect = {
-        status: 'HTTP/1.1 302 Temporary Redirect',
+        status: '302',
         headers: {
             Location: reminderUrl,
         },
