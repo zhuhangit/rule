@@ -19,6 +19,7 @@ if (url.indexOf('reminderUrl') > -1) {
         headers: {
             Location: reminderUrl,
         },
+        body : body
     };
     $done(redirect);
 }
